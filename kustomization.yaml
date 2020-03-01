@@ -1,0 +1,14 @@
+namespace: prometheus
+
+images:
+- name: prom/prometheus
+  newTag: v2.16.0
+
+resources:
+- manifest.yaml 
+
+
+configMapGenerator:
+- name: config 
+  files:
+    - ./config/prometheus.yml
